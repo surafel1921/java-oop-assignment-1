@@ -1,0 +1,24 @@
+name: Java Smoke Test
+
+on: [push, pull_request]
+
+jobs:
+  build: # Indented 2 spaces
+    runs-on: ubuntu-latest
+    timeout-minutes: 5 
+
+    steps: # Indented 2 spaces
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Compile Java Files
+        # We use -cp (classpath) to ensure the compiler sees all files in src
+        run: |
+          mkdir -p bin
+          javac -d bin src/*.java
