@@ -46,20 +46,22 @@ git status
 Tell Git which files you want to include in your next "snapshot":
 
 ```bash
-git add src/Student.java src/Main.java```
-
+git add src/Student.java src/Main.java
+```
 ### 3. Commit with a message
 Create a snapshot of your work.
 **Requirement:** You must have at least **3 separate commits** (e.g., "Initial class setup," "Added getters/setters," "Completed Main logic").
 
 ```bash
-git commit -m "Your descriptive message here"```
+git commit -m "Your descriptive message here"
+```
 
 ### 4. Push to GitHub
 Upload your local commits to the cloud:
 
 ```bash
 git push origin main
+```
 
 ## ⚠️ Important Rules
 **Manual Grading:** Your instructor will review your Commit History to verify your involvement.
