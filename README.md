@@ -1,5 +1,5 @@
 
-#Assignment 01: Java OOP & Git Fundamentals
+# Assignment 01: Java OOP & Git Fundamentals
 # Objectives
 1. Implement a simple Java Class (Encapsulation).
 2. Demonstrate mastery of the Git Lifecycle (Add, Commit, Push).
