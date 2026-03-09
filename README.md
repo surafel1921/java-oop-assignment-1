@@ -48,17 +48,17 @@ Tell Git which files you want to include in your next "snapshot":
 ```bash
 git add src/Student.java src/Main.java```
 
-###3. Commit with a message
+### 3. Commit with a message
 Create a snapshot of your work.
 **Requirement:** You must have at least **3 separate commits** (e.g., "Initial class setup," "Added getters/setters," "Completed Main logic").
 
-```Bash
+```bash
 git commit -m "Your descriptive message here"```
 
 ### 4. Push to GitHub
 Upload your local commits to the cloud:
 
-```Bash
+```bash
 git push origin main
 
 ## ⚠️ Important Rules
