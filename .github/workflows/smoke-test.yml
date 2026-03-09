@@ -3,11 +3,12 @@ name: Java Smoke Test
 on: [push, pull_request]
 
 jobs:
-  build: # Indented 2 spaces
+  build:
+    # Use the standard runner (Unlimited free minutes for public repos)
     runs-on: ubuntu-latest
     timeout-minutes: 5 
 
-    steps: # Indented 2 spaces
+    steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
@@ -18,8 +19,6 @@ jobs:
           distribution: 'temurin'
 
       - name: Compile Java Files
-        # We use -cp (classpath) to ensure the compiler sees all files in src
         run: |
           mkdir -p bin
           javac -d bin src/*.java
-          ls src/Student.java && javac -d bin src/*.java
