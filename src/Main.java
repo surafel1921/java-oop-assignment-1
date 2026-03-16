@@ -13,4 +13,5 @@ public class Main {
         s1.setName("Sara Mohamed");
         System.out.println("New name: " + s1.getName());
     }
+    // Commit 3: Finalized and ready for submission
 }
