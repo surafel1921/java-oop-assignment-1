@@ -1,22 +1,16 @@
-
 public class Main {
     public static void main(String[] args) {
-        // --- TODO: Step 1 ---
-        // Create your Student.java file in the src/ folder.
-        // It should have private fields, a constructor, and getters/setters.
 
-        // --- TODO: Step 2 ---
-        // Instantiate your first student object here
-        // Example: Student s1 = new Student("Abebe Kassa", 12345);
+        // Create two students
+        Student s1 = new Student("Sara Kim", 10001);
+        Student s2 = new Student("Ahmed Ali", 10002);
 
-        // --- TODO: Step 3 ---
-        // Instantiate your second student object here
-        
-        // --- TODO: Step 4 ---
-        // Print the details to the console using your getter methods
-        System.out.println("--- Student Enrollment List ---");
-        // System.out.println("Student Name: " + s1.getName());
+        // Show their names
+        System.out.println("Student 1 name: " + s1.getName());
+        System.out.println("Student 2 name: " + s2.getName());
 
-        System.out.println("\nAssignment Status: Check your Git commits before pushing!");
+        // Bonus: changing name using setter
+        s1.setName("Sara Mohamed");
+        System.out.println("New name: " + s1.getName());
     }
 }
