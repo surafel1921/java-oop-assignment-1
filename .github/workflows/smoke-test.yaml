@@ -1,15 +1,19 @@
-# File path must be: .github/workflows/smoke-test.yaml
 name: Java Smoke Test
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   smoke-test:
     runs-on: ubuntu-latest
-    timeout-minutes: 5 
+    timeout-minutes: 5
 
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Set up JDK 21
@@ -18,14 +22,10 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      - name: Compile Java Files
+      - name: Compile Java files
         run: |
           mkdir -p bin
-          # Use ** to find files in subdirectories (packages)
-          javac -d bin src/**/*.java
+          javac -d bin src/*.java
 
-      - name: Run Smoke Test
-        run: |
-          # Replace 'Main' with your actual main class name
-          # Ensure the class name matches the file name exactly
-          java -cp bin Main 
+      - name: Run the program (smoke test)
+        run: java -cp bin Main
